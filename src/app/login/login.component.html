@@ -1,0 +1,25 @@
+
+<div class="dashboardwelcomewrapper">
+  <div class="bashboardlogincenterblock">
+    <div class="bannercontent">
+      <img src="../../assets/images/logo1.png">
+      <div class="loginformwrapper">
+        <div class="landingformheader">
+          <h1>login</h1>
+        </div>
+        <div class="loginforminnerwrapper">
+         <!-- <form action="" method="post" class="loginform">-->
+          <form novalidate [formGroup]="loginform" name="loginform" (ngSubmit)="dosubmit(loginform.value)" class="loginform">
+          <!--  <div class="help-block" *ngIf="is_error">{{error_msg}}</div>-->
+            <div *ngIf="is_error" class="singleerror">{{is_error}}</div>
+            <p>
+              <label><span class="your-email"><input type="email" name="your-email" value="" size="40" class="form-control" placeholder="Email" [formControl]="loginform.controls['email']"></span> </label><span *ngIf ="loginform.controls['email'].touched && !loginform.controls['email'].valid" class="wpcf7-not-valid-tip">Emailid is Required !</span><br>
+              <label><span class="your-phone"><input type="password" name="your-password" value="" size="40" class="form-control" placeholder="password" [formControl]="loginform.controls['password']"></span> </label><span *ngIf ="loginform.controls['password'].touched && !loginform.controls['password'].valid" class="wpcf7-not-valid-tip">Password is Required !</span><br>
+              <input type="submit" value="login" class="btnlogin">
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

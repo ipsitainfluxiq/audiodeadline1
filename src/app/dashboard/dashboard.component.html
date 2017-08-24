@@ -1,0 +1,20 @@
+
+<div class="dashboardwelcomewrapper">
+  <div class="dashboardwelcomewrapperinner">
+    <div class="dashboardimgwrapper">
+      <img src="../../assets/images/logo1.png">
+    </div>
+    <div class="bashboardcenterblock">
+      <div class="bannercontent">
+        <h2>Welcome {{userdetails.firstname}} {{userdetails.lastname}}</h2>
+        <p>your replicated URL is</p>
+        <h5>http://{{userdetails.username}}.audiodeadline.com</h5>
+        <div class="loginbutton">
+          <a class="btn btnlogout" (click)="logout()">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
